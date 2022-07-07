@@ -13,7 +13,10 @@ const Public = () => <div>Public</div>;
 
 describe("private route", () => {
   it("should render public by default", () => {
-    const history = createMemoryHistory({ initialEntries: ["/"] });
+    const history = /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
+    createMemoryHistory({ initialEntries: ["/"] });
     render(
       <Router history={history}>
         <Switch>
@@ -35,7 +38,10 @@ describe("private route", () => {
       isLoggedIn: false,
     });
 
-    const history = createMemoryHistory({ initialEntries: ["/private"] });
+    const history = /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
+    createMemoryHistory({ initialEntries: ["/private"] });
 
     render(
       <Router history={history}>
@@ -58,7 +64,10 @@ describe("private route", () => {
       isLoggedIn: true,
     });
 
-    const history = createMemoryHistory({ initialEntries: ["/private"] });
+    const history = /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
+    createMemoryHistory({ initialEntries: ["/private"] });
 
     render(
       <Router history={history}>
